@@ -1,8 +1,6 @@
 doctype html
 head
   meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
-  meta(name="viewport" content="width=device-width")
-  meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
   link(rel="stylesheet" href="stylesheets/app.css")
 
   script(src="javascripts/vendor.js")
@@ -12,7 +10,176 @@ head
     require('initialize');
 
 body
+  .preloader.preloader-active
+    img(src="images/preloader.gif")
+  #menu
+    .close
+      |+
+    .links
+      a(href="")
+        |Работы
+      a(href="")
+        |О нас
+      a.contact
+        |Контакты
+    .flex-inner-cont
+      .social
+        a(href="")
+          img.svg(src="images/vk.svg")
+        a(href="")
+          img.svg(src="images/fb.svg")
+        a(href="")
+          img.svg(src="images/twitter.svg")
+        a(href="")
+          img.svg(src="images/youtube.svg")
+      .contacts
+        .addres
+          |Россия, Ростов-на-Дону, ул. Пушкинская, 157
+        .numbers
+          .one
+            |+7 863 264 94 89
+          .two
+            |+7 919 894 44 44
 
-  .section
-    h1 Hello man! Write your Jade here.
-    hr
+  .head
+    header.header
+      .container
+        a.logo(href="")
+          img.svg(src="images/logo.svg")
+        .menu
+          img.svg(src="images/burger.svg" alt="")
+    .main     
+      .slider
+        .slide
+          .container
+            .text
+              .title
+                |— Kinext.ru
+              .txt
+                |Фитнес клуб высоких
+                
+                |достижений
+                
+                |разработка промо сайта
+        .slide
+          .container
+            .text
+              .title
+                |— Kinext.ru
+              .txt
+                |Фитнес клуб высоких
+                
+                |доcтижений
+                
+                |разработка промо сайта
+  .portfolio
+    .container 
+      .inner
+        .main-flex
+          .flex-inner
+            .flex-item
+              .text
+                .title
+                  |— Tsargrad.tv
+                .txt
+                  |Фитнес клуб высоких
+                  
+                  |достижений
+                  
+                  |разработка промо сайта
+            .flex-item
+              .text
+                .title
+                  |— Nivea
+                .txt
+                  |Фитнес клуб высоких
+                  
+                  |достижений
+                  
+                  |разработка промо сайта
+          .flex-inner
+            .flex-item
+              .text
+                .title
+                  |— Nike+
+                .txt
+                  |Фитнес клуб высоких
+                  
+                  |достижений
+                  
+                  |разработка промо сайта
+            .flex-item
+        .main-flex-second
+          .flex-inner
+            .flex-item
+              .text
+                .title
+                  |— Suzuki
+                .txt
+                  |Фитнес клуб высоких
+                  
+                  |достижений
+                  
+                  |разработка промо сайта
+        .main-flex-third
+          .flex-inner
+            .flex-item
+            .flex-item
+              .text
+                .title
+                  |— Раменский
+                .txt
+                  |Фитнес клуб высоких
+                  
+                  |достижений
+                  
+                  |разработка промо сайта
+            .flex-item
+              .text
+                .title
+                  |— Fendi
+                .txt
+                  |Фитнес клуб высоких
+                  
+                  |достижений
+                  
+                  |разработка промо сайта
+          .flex-inner
+            .flex-item
+              .text
+                .title
+                  |— Infinity
+                .txt
+                  |Фитнес клуб высоких
+                  
+                  |достижений
+                  
+                  |разработка промо сайта
+            .flex-item
+              .text
+                .title
+                  |— Fresh Market
+                .txt
+                  |Фитнес клуб высоких
+                  
+                  |достижений
+                  
+                  |разработка промо сайта
+  .footer
+    .container
+      .copyright
+        |© COPYRIGHT
+        br
+        |2007-2015
+      .social
+        a(href="")
+          img.svg(src="images/vk.svg")
+        a(href="")
+          img.svg(src="images/fb.svg")
+        a(href="")
+          img.svg(src="images/twitter.svg")
+        a(href="")
+          img.svg(src="images/youtube.svg")
+
+
+
