@@ -1,0 +1,191 @@
+@import 'tools/_mixins'
+@import 'tools/_helpers'
+@import 'tools/_media_queries'
+@import 'tools/_normalize'
+@import 'tools/_settings'
+
+.about-us
+  .head
+    min-height: 100vh
+    min-width: 1024px
+    .header
+      min-width: 1024px
+      position: absolute
+      width: 100%
+      z-index: 20
+      padding: Rem(70) 0  
+      .container
+        @extend .row
+        align-items: center
+        .menu
+          cursor: pointer
+          transition: all 0.5s ease
+          opacity: 0.7
+          &:hover
+            opacity: 1
+          svg
+            vertical-align: middle
+            height: 23px
+            width: 28px 
+        .logo
+          svg 
+            vertical-align: middle
+            width: 151px
+            height: 17px
+
+    .main 
+      min-width: 100%
+      min-height: 100vh
+      .slider
+        margin: 0
+        .main-page-slide
+          background: url('../images/fon.png') no-repeat center center
+          background-size: cover
+        .slide
+          height: 100vh
+          display: flex
+          flex-flow: column nowrap
+          .container
+            @extend .column
+            justify-content: flex-end
+            align-items: flex-start
+            .text
+              width: 60%
+
+              @extend .column
+              margin-bottom: 100px
+              .title
+                font-size: 40px
+                font-weight: bold
+                line-height: 40px
+              .txt
+                margin-top: 20px
+                margin-left: 8%
+                align-self: flex-end
+                font-size: 12px
+                font-weight: normal
+  .portfolio
+    min-width: 1024px
+    .container
+      min-height: 1275px
+      .inner
+        position: absolute
+        @extend .column
+        justify-content: flex-start
+        top: -2%
+        width: calc(100% - 130px)
+        height: 100%  
+        +tablet
+          width: calc(100% - 80px)
+        +mobile
+          width: calc(100% - 30px)
+        .main-flex
+          min-height: 900px
+          @extend .row
+          .flex-inner
+            @extend .column
+
+            .flex-item
+              position: relative
+              color: white 
+              transition: all 0.5s ease 
+              &:hover
+                color: $dark-pink
+              .text
+                padding: Rem(50)
+                position: absolute
+                width: 75%
+                bottom: 0
+                @extend .column
+                .title
+                  font-size: 24px
+                  font-weight: bold
+                  line-height: 24px
+                .txt
+                  margin-top: 20px
+                  margin-left: 8%
+                  align-self: start
+                  font-size: 12px
+                  font-weight: normal
+            &:first-of-type
+              flex: 5 0 auto
+              .flex-item
+                flex: 7 1 auto
+                background: #d8d8d8
+                .text
+                  width: 90%
+                  .txt
+                    margin-left: 7%
+                &:last-of-type
+                  flex: 8 1 auto
+                  background: #6f6f6f
+            &:last-of-type
+              flex: 3 0 auto
+              .flex-item
+                background: #acacac
+                flex: 5 1 auto
+                .text
+                  top: 0
+                  justify-content: flex-start
+                  width: 80%
+                  .txt
+                    margin-left: 16%
+                &:last-of-type
+                  flex: 3 1 auto
+                  background: transparent
+                  opacity: 0
+                  z-index: -1
+        .main-flex-second
+          height: 400px
+          display: flex
+          .flex-inner
+            width: 100%
+            height: 100%
+            @extend .column
+            .flex-item
+              background: #b5b5b5
+              width: 100%
+              height: 100%
+              position: relative
+              color: white 
+              transition: all 0.5s ease 
+              &:hover
+                color: $dark-pink
+              .text
+                padding: Rem(50)
+                position: absolute
+                width: 60%
+                bottom: 0
+                @extend .column
+                .title
+                  font-size: 24px
+                  font-weight: bold
+                  line-height: 24px
+                .txt
+                  margin-top: 20px
+                  margin-left: 6%
+                  align-self: start
+                  font-size: 12px
+                  font-weight: normal
+  .footer
+    min-width: 1024px
+    padding: Rem(40) 0
+    .container
+      @extend .row
+      color: black
+      .copyright
+        font-size: 11px
+        margin-left: Rem(30)
+      .social
+        @extend .row
+        justify-content: flex-end
+        align-items: center
+        a 
+          opacity: 0.5
+          margin-right: Rem(30)
+          transition: all 0.5s ease
+          &:hover
+            opacity: 1
+          svg
+            height: 20px
+            width: 20px

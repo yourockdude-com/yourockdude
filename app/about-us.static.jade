@@ -1,0 +1,138 @@
+doctype html
+head
+  meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+  link(rel="stylesheet" href="stylesheets/app.css")
+
+  script(src="javascripts/vendor.js")
+  script(src="javascripts/app.js")
+
+  script.
+    require('initialize');
+
+body
+  .preloader.preloader-active
+    img(src="images/preloader.gif")
+  #menu
+    .close
+      |+
+    .links
+      a(href="index.html")
+        |Работы
+      a(href="about-us.html").pink
+        |О нас
+      a.contact
+        |Контакты
+    .flex-inner-cont
+      .social
+        a(href="")
+          img.svg(src="images/vk.svg")
+        a(href="")
+          img.svg(src="images/fb.svg")
+        a(href="")
+          img.svg(src="images/twitter.svg")
+        a(href="")
+          img.svg(src="images/youtube.svg")
+      .contacts
+        .addres
+          |Россия, Ростов-на-Дону, ул. Пушкинская, 157
+        .numbers
+          .one
+            |+7 863 264 94 89
+          .two
+            |+7 919 894 44 44
+  .about-us
+
+    .head
+      header.header
+        .container
+          a.logo(href="index.html")
+            img.svg(src="images/logo.svg")
+          .menu
+            img.svg(src="images/burger.svg" alt="")
+      .main     
+        .slider
+          .slide.main-page-slide
+            .container
+              .text
+                .title
+                  |— О нас
+                .txt
+                  |Продкшен агентство с Digital ориентацией, разработка сложных веб-
+                  
+                  |проектов,
+                  
+                  |мобильных приложений, e-commerce, брендинг и рекламные кампании.
+          .slide.main-page-slide
+            .container
+              .text
+                .title
+                  |— О нас
+                .txt
+                  |Продкшен агентство с Digital ориентацией, разработка сложных веб-
+                  
+                  |проектов,
+                  
+                  |мобильных приложений, e-commerce, брендинг и рекламные кампании.
+    .portfolio
+      .container 
+        .inner
+          .main-flex
+            .flex-inner
+              a.flex-item(href="project-page.html")
+                .text
+                  .title
+                    |— Наша команда профессионалов 
+                  .txt
+                    |Постоянно развивающиеся специалисты
+                    
+                    |компании,
+                    
+                    |неоднократные Awwwards и The FWA
+              a.flex-item(href="project-page.html")
+                .text
+                  .title
+                    |— Работа в режиме Fun
+                  .txt
+                    |Мы не только хорошо работаем, но и хорошо 
+                    
+                    |отдыхаем
+                    
+                    |Xbox, сноуборды, пейнтбол матчи.
+            .flex-inner
+              a.flex-item(href="project-page.html")
+                .text
+                  .title
+                    |— Наш офис
+                  .txt
+                    |Все для комфорта
+                    
+                    |команды
+              a(href="project-page.html").flex-item
+          .main-flex-second
+            .flex-inner
+              a(href="project-page.html").flex-item
+                .text
+                  .title
+                    |— Международное признание
+                  .txt
+                    |Наши партнеры, мировые бренды и ведущие агентства более чем 30
+                    
+                    |стран мира
+    .footer
+      .container
+        .copyright
+          |© COPYRIGHT
+          br
+          |2007-2015
+        .social
+          a(href="")
+            img.svg(src="images/vk.svg")
+          a(href="")
+            img.svg(src="images/fb.svg")
+          a(href="")
+            img.svg(src="images/twitter.svg")
+          a(href="")
+            img.svg(src="images/youtube.svg")
+
+
+
