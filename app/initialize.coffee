@@ -5,7 +5,7 @@ $(document).ready ->
   $('.slider').slick(
     adaptiveHeight: false
     arrows: false
-    fade: true
+    
     )
   $('.menu').click ->
     $('#menu').addClass('active')

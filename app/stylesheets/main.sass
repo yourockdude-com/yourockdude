@@ -228,6 +228,10 @@ body
 
           .flex-item
             position: relative
+            color: white 
+            transition: all 0.5s ease 
+            &:hover
+              color: $dark-pink
             .text
               padding: Rem(50)
               position: absolute
@@ -263,6 +267,8 @@ body
               &:last-of-type
                 flex: 3 1 auto
                 background: transparent
+                opacity: 0
+                z-index: -1
       .main-flex-second
         height: 400px
         display: flex
@@ -275,6 +281,10 @@ body
             width: 100%
             height: 100%
             position: relative
+            color: white 
+            transition: all 0.5s ease 
+            &:hover
+              color: $dark-pink
             .text
               padding: Rem(50)
               position: absolute
@@ -299,6 +309,10 @@ body
           @extend .column
           .flex-item
             position: relative
+            color: white 
+            transition: all 0.5s ease 
+            &:hover
+              color: $dark-pink
             .text
               padding: Rem(50)
               position: absolute
@@ -319,8 +333,12 @@ body
             .flex-item
               &:first-of-type
                 flex: 2 1 auto
+                opacity: 0
+                z-index: -1
+                background: transparent
               &:nth-of-type(2)
                 flex: 3 1 auto
+                opacity: 1
                 background: #acacac
                 .text
                   bottom: 0
@@ -347,13 +365,15 @@ body
     color: black
     .copyright
       font-size: 11px
+      margin-left: Rem(30)
     .social
       @extend .row
       justify-content: flex-end
       align-items: center
       a 
         opacity: 0.5
-        margin-right: 40%
+        margin-right: Rem(30)
+        transition: all 0.5s ease
         &:hover
           opacity: 1
         svg
