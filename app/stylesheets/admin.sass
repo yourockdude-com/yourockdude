@@ -1,0 +1,45 @@
+@import 'tools/_mixins'
+@import 'tools/_helpers'
+@import 'tools/_media_queries'
+@import 'tools/_normalize'
+@import 'tools/_settings'
+.admin 
+  padding: Rem(50)
+  .container
+    color: black
+    min-height: 1000px
+    @extend .column
+    justify-content: flex-start
+    .logo
+      align-self: flex-start
+      width: 171px
+      svg 
+        path
+          fill: black
+    .main
+      margin-top: 60px
+      @extend .row
+      .flex-inner
+        display: flex
+        &:first-of-type 
+          flex: 1 1 auto
+        &:nth-of-type(2)
+          flex: 2 1 auto 
+          .flex-item
+            &:first-of-type
+              flex: 2 1 auto
+              background: red
+            &:last-of-type
+              flex: 2 1 auto
+            &:nth-of-type(2)
+              flex: 1 1 auto
+        &:last-of-type
+          flex: 1 1 auto
+
+    ul
+      list-style: none
+      padding-left: 10px
+      margin: 0
+      li:not(.first)
+        padding-top: 10px
+      

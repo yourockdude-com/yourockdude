@@ -1,0 +1,103 @@
+doctype html
+head
+  meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+  link(rel="stylesheet" href="stylesheets/app.css")
+
+  script(src="javascripts/vendor.js")
+  script(src="javascripts/app.js")
+
+  script.
+    require('initialize');
+
+body
+  .preloader.preloader-active
+    img(src="images/preloader.gif")
+  .admin
+    .container
+      .logo
+        img.svg(src="images/logo.svg")
+      .main
+        .flex-inner
+          ul
+            li.first
+              |Главная
+            li 
+              |Работы
+              ul
+                li
+                  |Проект 1
+                li 
+                  |Проект 2
+                  ul
+                    li 
+                      |Фото 1
+                    li 
+                      |Фото 1
+                    li 
+                      |Фото 1
+                    li 
+                      |Фото 1
+                    li 
+                      |Видео 1
+                li 
+                  |Проект 3
+                li
+                  |Проект 4
+                li 
+                  |Проект 5
+              li
+                |О нас
+              li 
+                |Контакты
+              li 
+                |Футер
+        .flex-inner
+          .flex-item
+            .content
+          .flex-item
+            .line
+            .text
+              .title
+                |Kinext.ru - фитнес клуб высоких достижений
+              .txt
+                |промо сайт фитнес клуба
+          .flex-item
+            form(method="post")
+              .component
+                .title
+                  |ФОТО
+                .content
+                  input(type="file")
+              .component
+                .title
+                  |Описание
+                .content
+                  input(type="text")
+                  input(type="button" value="+ ДОБАВИТЬ")
+                .content
+                  input(type="text")
+                  input(type="button" value="+ ДОБАВИТЬ")
+              .component.switch
+                .content
+                  label(for="case") Кейс на сайте
+                  input#case(type="radio" name="1")
+                  label(for="link") Ссылка на проект
+                  input#link(type="radio" name="1" checked)
+                .content
+                  input(type="text")
+              .comopnent
+                .content
+                  input(type="submit" value="ОПУБЛИКОВАТЬ")
+                  input(type="reset" value="ОЧИСТИТЬ")
+        .flex-inner
+          .content
+            .head
+            .inner
+              .block1
+              .block2
+              .block3
+              .block4
+
+
+
+
