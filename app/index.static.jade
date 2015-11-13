@@ -5,6 +5,8 @@ head
 
   script(src="javascripts/vendor.js")
   script(src="javascripts/app.js")
+  script(src="javascripts/segment.min.js")
+  script(src="javascripts/ease.min.js")
 
   script.
     require('initialize');
@@ -13,33 +15,32 @@ body
   .preloader.preloader-active
     img(src="images/preloader.gif")
   #menu
-    .close
-      |+
-    .links
-      a(href="index.html").pink
-        |Работы
-      a(href="about-us.html")
-        |О нас
-      a.contact
-        |Контакты
-    .flex-inner-cont
-      .social
-        a(href="")
-          img.svg(src="images/vk.svg")
-        a(href="")
-          img.svg(src="images/fb.svg")
-        a(href="")
-          img.svg(src="images/twitter.svg")
-        a(href="")
-          img.svg(src="images/youtube.svg")
-      .contacts
-        .addres
-          |Россия, Ростов-на-Дону, ул. Пушкинская, 157
-        .numbers
-          .one
-            |+7 863 264 94 89
-          .two
-            |+7 919 894 44 44
+    .container
+      .links
+        a(href="index.html").pink
+          |Работы
+        a(href="about-us.html")
+          |О нас
+        a.contact
+          |Контакты
+      .flex-inner-cont
+        .social
+          a(href="")
+            img.svg(src="images/vk.svg")
+          a(href="")
+            img.svg(src="images/fb.svg")
+          a(href="")
+            img.svg(src="images/twitter.svg")
+          a(href="")
+            img.svg(src="images/youtube.svg")
+        .contacts
+          .addres
+            |Россия, Ростов-на-Дону, ул. Пушкинская, 157
+          .numbers
+            .one
+              |+7 863 264 94 89
+            .two
+              |+7 919 894 44 44
   .main-page
 
     .head
@@ -48,7 +49,11 @@ body
           a.logo(href="")
             img.svg(src="images/logo.svg")
           .menu
-            img.svg(src="images/burger.svg" alt="")
+            svg(width="100px" height="100px")
+              path(id="pathA" d="M 30 40 L 70 40 C 90 40 90 75 60 85 A 40 40 0 0 1 20 20 L 80 80")
+              path(id="pathB" d="M 30 50 L 70 50")
+              path(id="pathC" d="M 70 60 L 30 60 C 10 60 10 20 40 15 A 40 38 0 1 1 20 80 L 80 20")
+
       .main     
         .slider
           .slide.main-page-slide

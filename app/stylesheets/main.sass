@@ -61,6 +61,8 @@
   color: $dark-pink !important
 body
   font-family: 'Lato'
+.hidden
+  overflow: hidden
 .active
   transform: translate(0%) !important
 .preloader
@@ -78,77 +80,69 @@ body
   display: flex
 #menu
   position: fixed 
-  height: 100vh
-  transition: all 0.5s ease-in-out
-  color: white
+
+  width: 100%
+  transition: all 1s ease-in-out
+
   transform: translate(100%)
-  @extend .column
-  width: 30%
-  right: 0
   z-index: 30
   background: rgba(64,64,64,0.81)
-  +tablet
-    width: 45%
-  +mobile
-    width: 60%
-  .close
-    font-size: 60px
-    font-weight: normal
-    transform: rotate(43deg)
-    align-self: flex-end
-    margin-top: 10%
-    margin-right: 10%
-    cursor: pointer
-    transition: all 0.5s ease
-    &:hover
-      color: $dark-pink
-  .links
+  .container
+    height: 100vh
+    color: white
     @extend .column
-    height: 25%
-    margin-left: 8%
-  .contact
-    cursor: pointer
-  a 
-    color: white 
-    text-decoration: none
-    font-weight: bold
-    font-size: 22px
-    transition: all 0.5s ease 
-    &:hover
-      color: $dark-pink 
-  .flex-inner-cont
-    margin-left: 8%
-    transform: translateY(60%)
-    transition: all 0.5s ease-in-out
-    @extend .column
-    .social
-      @extend .row
-      justify-content: flex-start
-      margin-bottom: 5%
-      a 
-        opacity: 0.5
-        &:hover
-          opacity: 1
-        &:not(:first-of-type)
-          margin-left: 8%
-        svg
-          height: 25px
-          width: 25px
-          path 
-            fill: #fff
-    .contacts
-      font-weight: bold
-      margin-bottom: 5%
-      font-size: 13px
+    justify-content: center
+    .links
+
       @extend .column
-      .addres
-        margin-bottom: 5%
-      .numbers
-        font-size: 15px
+      align-items: flex-start
+      height: 25%
+      margin-top: 15%
+    .contact
+      cursor: pointer
+    a 
+      color: white 
+      text-decoration: none
+      font-weight: bold
+      font-size: 22px
+      transition: all 0.5s ease 
+      &:hover
+        color: $dark-pink 
+    .flex-inner-cont 
+      position: absolute
+      bottom: 0
+      transform: translateY(60%)
+      transition: all 0.5s ease-in-out
+      @extend .column
+      .social
         @extend .row
         justify-content: flex-start
-        .two 
-          margin-left: 8%
+        
+        a 
+          opacity: 0.5
+          margin-bottom: 15px
+          &:hover
+            opacity: 1
+          &:not(:first-of-type)
+            margin-left: 20%
+          svg
+            height: 25px
+            width: 25px
+            path 
+              fill: #fff
+      .contacts
+        font-weight: bold
+        margin-bottom: 5%
+        font-size: 13px
+        @extend .column
+        .addres
+          margin-bottom: 5%
+        .numbers
+          font-size: 15px
+          @extend .row
+          justify-content: flex-start
+          .two 
+            margin-left: 8%
 .main-page
   .head
     min-height: 100vh
@@ -157,8 +151,8 @@ body
       min-width: 1024px
       position: absolute
       width: 100%
-      z-index: 20
-      padding: Rem(70) 0  
+      z-index: 50
+      padding: Rem(70) 0 Rem(0) 
       .container
         @extend .row
         align-items: center
@@ -166,12 +160,16 @@ body
           cursor: pointer
           transition: all 0.5s ease
           opacity: 0.7
+          display: inline-block
+          z-index: 50
           &:hover
             opacity: 1
-          svg
-            vertical-align: middle
-            height: 23px
-            width: 28px 
+          svg 
+            path 
+              stroke: #fff 
+              stroke-width: 6px
+              stroke-linecap: round
+              fill: transparent
         .logo
           svg 
             vertical-align: middle
@@ -234,11 +232,15 @@ body
               position: relative
               color: white 
               transition: all 0.5s ease 
+              overflow: hidden
               &:hover
-                color: $dark-pink
+                .text
+                  transform: translate(0) !important
               .text
                 padding: Rem(50)
                 position: absolute
+                transform: translateY(100%)
+                transition: all 1s cubic-bezier(0.56, 1.25, 0.7, 1.05) 0s
                 width: 300px
                 bottom: 0
                 @extend .column
@@ -246,6 +248,7 @@ body
                   font-size: 24px
                   font-weight: bold
                   line-height: 24px
+                  @extend .row
                 .txt
                   margin-top: 20px
                   margin-left: 16.5%
@@ -268,6 +271,8 @@ body
                 .text
                   top: 0
                   justify-content: flex-start
+                  transform: translateY(-100%)
+
                 &:last-of-type
                   flex: 3 1 auto
                   background: transparent
@@ -286,14 +291,18 @@ body
               height: 100%
               position: relative
               color: white 
-              transition: all 0.5s ease 
+              transition: all 1s ease-in-out
+              overflow: hidden
               &:hover
-                color: $dark-pink
+                .text
+                  transform: translateY(0%)
               .text
                 padding: Rem(50)
                 position: absolute
                 width: 300px
                 bottom: 0
+                transform: translateY(100%)
+                transition: all 1s cubic-bezier(0.56, 1.25, 0.7, 1.05)
                 @extend .column
                 .title
                   font-size: 24px
@@ -314,13 +323,17 @@ body
             .flex-item
               position: relative
               color: white 
-              transition: all 0.5s ease 
+              transition: all 1s ease
+              overflow: hidden
               &:hover
-                color: $dark-pink
+                .text
+                  transform: translateY(0%) !important
               .text
                 padding: Rem(50)
                 position: absolute
                 width: 300px
+                transform: translateY(100%)
+                transition: all 1s cubic-bezier(0.56, 1.25, 0.7, 1.05) 0s
                 @extend .column
                 .title
                   font-size: 24px
@@ -357,6 +370,8 @@ body
                 &:first-of-type
                   flex: 4 1 auto
                   background: #6f6f6f
+                  .text
+                    transform: translateY(-100%)
                 &:last-of-type
                   flex: 5 1 auto
                   background: #d8d8d8
