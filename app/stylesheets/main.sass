@@ -293,9 +293,54 @@ body
               color: white 
               transition: all 1s ease-in-out
               overflow: hidden
+              background: #fa0000
               &:hover
                 .text
                   transform: translateY(0%)
+                .first
+                  opacity: 0
+                .second
+                  svg 
+                    path 
+                      fill: #fff
+              .first
+                transition: all 1s ease 
+              .second
+                position: relative
+                min-width: 50%
+                svg 
+                  position: absolute
+                  max-width: 290px
+                  min-width: 290px
+                  z-index: 1
+                  right: 0
+                  top: -30px
+                   
+                  path 
+                    fill: transparent
+                    transition: all 1s ease
+
+              .images
+                @extend .row
+                margin-top: 30px
+                height: 100%
+                width: 100%
+                .image
+                  position: relative
+                  margin-left: 10px
+                  img 
+                    position: absolute
+                    z-index: 2
+
+                  &:first-of-type
+                    img
+                      margin-left: 130px
+                  &:last-of-type
+                    img
+                      bottom: 0
+
+                .first
+                  @extend .row
               .text
                 padding: Rem(50)
                 position: absolute
