@@ -7,7 +7,6 @@ head
   script(src="javascripts/app.js")
   script(src="javascripts/segment.min.js")
   script(src="javascripts/ease.min.js")
-
   script.
     require('initialize');
 
@@ -42,7 +41,7 @@ body
             .two
               |+7 919 894 44 44
   .main-page
-
+    
     .head
       header.header
         .container
@@ -53,31 +52,23 @@ body
               path(id="pathA" d="M 30 40 L 70 40 C 90 40 90 75 60 85 A 40 40 0 0 1 20 20 L 80 80")
               path(id="pathB" d="M 30 50 L 70 50")
               path(id="pathC" d="M 70 60 L 30 60 C 10 60 10 20 40 15 A 40 38 0 1 1 20 80 L 80 20")
-
-      .main     
-        .slider
-          .slide.main-page-slide
-            .container
-              .text
-                .title
-                  |— Kinext.ru
-                .txt
-                  |Фитнес клуб высоких
+      .main
+        .background(data-parallax="scroll" data-image-src="../images/bg1.png")
+        .opacity-back(data-parallax="scroll" data-image-src="../images/bg2.png")
+   
+        .container
+          #content
+            #left-txt
+              |Мы разрабатываем
+            #center-txt
+              |Брединг
+            
+           
+                
+        
+        
                   
-                  |достижений
-                  
-                  |разработка промо сайта
-          .slide.main-page-slide
-            .container
-              .text
-                .title
-                  |— Kinext.ru
-                .txt
-                  |Фитнес клуб высоких
-                  
-                  |доcтижений
-                  
-                  |разработка промо сайта
+               
     .portfolio
       .container 
         .inner
@@ -118,26 +109,22 @@ body
           .main-flex-second
             .flex-inner
               
-              a(href="project-page.html").flex-item
+              a(href="http://www.suzuki-motor.ru/" target="_blank").flex-item
                 .images
                   .first
                     .image
-                      img(src="images/SUZUKI_iPad.png")
-                    .image
-                      img(src="images/SUZUKI_iPhone.png")
+                      img(src="images/moto.png")
                   .second
                     .image
                       img.svg(src="images/SUZUKI_logo.svg")
 
                 .text
                   .title
-                    |— Suzuki
+                    |— Suzuki Motor
                   .txt
-                    |Фитнес клуб высоких
-                    
-                    |достижений
-                    
-                    |разработка промо сайта
+                    |Сайт японской
+                    |машиностроительной
+                    |компании
           .main-flex-third
             .flex-inner
               a(href="project-page.html").flex-item
@@ -185,9 +172,7 @@ body
     .footer
       .container
         .copyright
-          |© COPYRIGHT
-          br
-          |2007-2015
+          |© 2012—2015 You Rock Dude!
         .social
           a(href="")
             img.svg(src="images/vk.svg")

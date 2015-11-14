@@ -17,6 +17,7 @@
   "dependencies": {
     "jquery": "~2.1.4",
     "inline-svg": "~2.2.1",
-    "slick-carousel": "~1.5.8"
+    "slick-carousel": "~1.5.8",
+    "parallax.js": "~1.3.2"
   }
 }

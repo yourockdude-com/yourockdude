@@ -1,10 +1,14 @@
 $(window).load ->
   $('.preloader').removeClass('preloader-active')
 $(document).ready ->
+
   inlineSVG.init()
   $('.slider').slick(
     adaptiveHeight: false
     arrows: false
+    fade: true
+    autoplay: true
+    autoplaySpeed: 4000
     
     )
   $('.contact').click ->
@@ -97,3 +101,15 @@ $(document).ready ->
       outAC segmentC
     toCloseIcon = !toCloseIcon
     return
+  $('html').hover ->
+    $('.parallax-slider').addClass('scale')
+  $(window).scroll ->
+    if $('body').scrollTop() > 350
+      $('.parallax-mirror:nth-of-type(1)').find('.parallax-slider').removeClass('opacity')
+      $('.parallax-mirror:nth-of-type(2)').find('.parallax-slider').addClass('opacity')
+    else
+      $('.parallax-mirror:nth-of-type(1)').find('.parallax-slider').addClass('opacity')
+      $('.parallax-mirror:nth-of-type(2)').find('.parallax-slider').removeClass('opacity')
+  
+
+
