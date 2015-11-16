@@ -58,7 +58,7 @@
   font-weight: normal
   font-style: normal
 .pink
-  color: #C8BA8B !important
+  color: $gold !important
 body
   font-family: 'Lato'
   background: #191919
@@ -112,7 +112,7 @@ body
     .flex-inner-cont 
       position: absolute
       bottom: 0
-      transform: translateY(60%)
+      transform: translateY(70%)
       transition: all 0.5s ease-in-out
       @extend .column
       .social
@@ -130,7 +130,7 @@ body
             height: 25px
             width: 25px
             path 
-              fill: #fff
+              fill: $gold
       .contacts
         font-weight: bold
         margin-bottom: 5%
@@ -142,11 +142,17 @@ body
           font-size: 15px
           @extend .row
           justify-content: flex-start
+          margin-bottom: 5%
           .two 
             margin-left: 8%
+        .mail 
+          a
+            font-size: 15px !important
+            text-decoration: underline
 .parallax-slider
   transform: translate3d(0px, 0px, 0px) scale(1) !important
-  
+.typed-cursor
+  display: none  
 .scale
   transform: translate3d(0px, 0px, 0px) scale(1.2) !important
 .opacity
@@ -222,21 +228,23 @@ body
         align-items: flex-start
         #content
           color: white
-          width: 700px
-          margin-bottom: 5%
+          width: 100%
+          margin-bottom: 150px
           font-size: 40px
           line-height: 40px
           @extend .row
           justify-content: flex-start
           #center-txt
             margin-left: 10px
+            white-space: nowrap
+            color: $gold
         
           
   .portfolio
     min-width: 1024px
     background: #181818
     .container
-      min-height: 2205px
+      min-height: 2505px
       .inner
         position: absolute
         @extend .column
@@ -277,23 +285,113 @@ body
                   @extend .row
                 .txt
                   margin-top: 20px
-                  margin-left: 16.5%
                   align-self: start
                   font-size: 14px
                   font-weight: normal
             &:first-of-type
               flex: 5 0 auto
               .flex-item
-                flex: 7 1 auto
-                background: #d8d8d8
+                
+                &:first-of-type
+                  flex: 6 1 auto
+                  background: #1a1a1c
+                  &:hover
+                    .logo
+                      opacity: 1
+                    .bottle
+                      opacity: 0
+                    .bottle1
+                      opacity: 0.1
+
+                  .logo
+                    opacity: 0
+                    transition: all 1s ease 
+                    width: 65%
+                    top: 20px
+                    position: absolute
+                    z-index: 2
+                    left: 50%
+                    transform: translateX(-50%)
+                    svg 
+                      path 
+                        fill: #fff !important
+                  .bottle
+                    opacity: 1
+                    transition: all 1s ease 
+                    position: absolute
+                    bottom: -2%
+                    right: 5%
+                  .bottle1
+                    opacity: 0
+                    transition: all 1s ease 
+                    position: absolute
+                    bottom: -2%
+                    right: 5%
+
                 &:last-of-type
                   flex: 8 1 auto
-                  background: #6f6f6f
+                  background: #212B84
+                  position: relative
+                  .text
+                    height: 90%
+                    .logo
+                      svg 
+                        width: 150%
+                        path, rect
+                          fill: #fff !important
+                  .image
+                    position: absolute
+                    transition: all 1s ease
+                    bottom: -1%
+                    img 
+                      max-height: 100%
+                      max-width: 100%
+                  &:hover
+                    .image 
+                      transform: translate3d(40%,0,0)
+                      opacity: 0.5
+
             &:last-of-type
               flex: 3 0 auto
               .flex-item
-                background: #acacac
+                background: url('../images/nike.jpg') no-repeat center center 
+                background-size: cover
                 flex: 5 1 auto
+                display: flex
+                &:hover
+                  .image
+                    svg 
+                      width: 130px
+                  .circle
+                    svg 
+                      width: 220px
+                      opacity: 1
+                .image
+                  position: absolute
+                  left: 50%
+                  top: 60%
+                  transform: translate(-50%,-50%)
+                  transition: all 1s ease
+                  
+                  svg 
+                    position: relative
+                    width: 150px
+                    transition: all 1s ease
+                    
+                    path 
+                      fill: #fff !important
+
+                .circle
+                  position: absolute 
+                  left: 50%
+                  top: 60%
+                  transform: translate(-50%,-50%)
+                  transition: all 1s ease
+                  svg 
+                    width: 200px
+                    transition: all 1s ease
+                    opacity: 0
+                    
                 .text
                   top: 0
                   justify-content: flex-start
@@ -367,7 +465,6 @@ body
                   line-height: 24px
                 .txt
                   margin-top: 20px
-                  margin-left: 16.5%
                   align-self: start
                   font-size: 14px
                   font-weight: normal
@@ -398,7 +495,6 @@ body
                   line-height: 24px
                 .txt
                   margin-top: 20px
-                  margin-left: 16.5%
                   align-self: start
                   font-size: 14px
                   font-weight: normal
@@ -415,12 +511,59 @@ body
                 &:nth-of-type(2)
                   flex: 3 1 auto
                   opacity: 1
-                  background: #acacac
+                  background: #171833
+                  &:hover
+                    .image
+                      transform: translateY(-90%)
+                    .logo
+                      opacity: 1
+                  .image
+                    position: absolute
+                    top: 5%
+                    left: 5%
+                    opacity: 1
+                    transition: all 1s ease
+
+                  .logo
+                    opacity: 0
+                    transition: all 1s ease-in-out
+                    position: absolute
+                    top: 10%
+                    left: 25%
+                    transform: translateX(-50%)
+                    svg 
+                      height: 110px
+
+                      
+                      path
+                        fill: #fff !important
+                      
+                    
+                      
+                    
+                      
+
                   .text
                     bottom: 0
                 &:last-of-type
                   flex: 2 1 auto
-                  background: #919191
+                  background: url('../images/FENDI_bckg.png') no-repeat center center 
+                  background-size: cover
+                  &:hover
+                    .image
+                      width: 100%
+                  .image
+                    width: 30%
+                    background: #FEBE54
+                    height: 110%
+                    position: absolute
+                    transition: all 1s ease
+                    padding: 10px
+                    svg 
+                      max-width: 200px
+                      float: right
+                      path 
+                        fill: white
                   .text
                     bottom: 0
             &:last-of-type
@@ -428,14 +571,114 @@ body
               .flex-item
                 &:first-of-type
                   flex: 4 1 auto
-                  background: #6f6f6f
+                  background: #774093
+                  &:hover
+                    .logo
+                      transform: translate(-400%,-50%)
+                    .image
+                      transform: translate(0,-50% )
+                  .logo
+                    position: absolute
+                    transition: all 1s ease-in-out
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%,-50%)
+                    svg 
+                      height: 100px
+                      width: 100px
+                      path, rect
+                        fill: #fff !important
+                      
+                  .image
+
+                    position: absolute
+                    height: 60%
+                    width: 55%
+                    background: white
+                    right: 0
+                    top: 50%
+                    transform: translate(105%,-50%)
+                    transition: all 1s ease-in-out
+                    display: flex
+                    box-shadow: 0px 900px 100px -20px black
+                    svg 
+                      height: 80%
+                      width: 80%
+                      margin: auto
                   .text
                     transform: translateY(-100%)
                 &:last-of-type
                   flex: 5 1 auto
-                  background: #d8d8d8
+                  background: #fff
+                  &:hover
+                    .logo
+                      opacity: 1
+                    .image
+                      transform: translate(40%)
+
+                  .image
+                    position: absolute
+                    bottom: 0
+                    right: -5%
+                    transition: all 1s ease
+                  .logo
+                    position: absolute
+                    left: 8%
+                    opacity: 0
+                    transition: all 1s ease
+                    margin-top: 100px
+                    svg 
+                      width: 100%
+
+                      path 
+                        fill: #53651f !important
+
                   .text
                     bottom: 0
+                    color: #191919
+        .copy
+          width: 70%
+          height: 300px
+          .flex-item
+            background: url('../images/backgr.png') no-repeat center center !important
+            background-size: cover 
+            &:hover 
+              .image
+                opacity: 0
+              .tr 
+                transform: translate(0)
+              .tx 
+                transform: translate(-100%)
+            .image
+              position: absolute
+              top: 50%
+              left: 50%
+              transform: translate(-50%, -50%)
+              transition: all 1s ease
+              opacity: 1
+              z-index: 2
+              svg 
+                width: 100%
+            .tr 
+              position: absolute 
+              left: 0%
+              z-index: 1
+              transition: all 1s ease
+              transform: translate(-100%)
+              svg 
+                width: 300px
+            .text
+              z-index: 2
+            .tx
+              position: absolute 
+              right: -27%
+              bottom: 5%
+              z-index: 1
+              transition: all 1s ease
+              transform: translate(20%)
+              svg 
+                width: 200px
+              
   .footer
     min-width: 1024px
     padding: Rem(40) 0
@@ -446,7 +689,7 @@ body
       .copyright
         font-size: 11px
         margin-left: Rem(30)
-        color: #C8BA8B
+        color: $gold
       .social
         @extend .row
         justify-content: flex-end
@@ -460,6 +703,8 @@ body
           svg
             height: 20px
             width: 20px
+            path 
+              fill: $gold !important
 
 
 

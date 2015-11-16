@@ -1,5 +1,17 @@
 $(window).load ->
   $('.preloader').removeClass('preloader-active')
+  $('#center-txt').typed
+    strings: [
+      'сайты'
+      'интернет-магазины'
+      'приложения'
+      'рекламные кампании'
+      'брендинг'
+      'айдентику'
+    ]
+    typeSpeed: 50
+    backDelay: 1500
+    loop: 100
 $(document).ready ->
 
   inlineSVG.init()
@@ -110,6 +122,8 @@ $(document).ready ->
     else
       $('.parallax-mirror:nth-of-type(1)').find('.parallax-slider').addClass('opacity')
       $('.parallax-mirror:nth-of-type(2)').find('.parallax-slider').removeClass('opacity')
+  
+
   
 
 

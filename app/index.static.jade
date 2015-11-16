@@ -18,20 +18,20 @@ body
       .links
         a(href="index.html").pink
           |Работы
-        a(href="about-us.html")
+        a(href="#")
           |О нас
         a.contact
           |Контакты
       .flex-inner-cont
         .social
-          a(href="")
-            img.svg(src="images/vk.svg")
-          a(href="")
+          a(href="http://instagram.com/cr8tive")
+            img.svg(src="images/instagram.svg")
+          a(href="http://www.facebook.com/yyurchenko")
             img.svg(src="images/fb.svg")
-          a(href="")
+          a(href="http://twitter.com/yuriyurchenko")
             img.svg(src="images/twitter.svg")
-          a(href="")
-            img.svg(src="images/youtube.svg")
+          a(href="http://dribbble.com/cr8tive")
+            img.svg(src="images/dr.svg")
         .contacts
           .addres
             |Россия, Ростов-на-Дону, ул. Пушкинская, 157
@@ -40,6 +40,8 @@ body
               |+7 863 264 94 89
             .two
               |+7 919 894 44 44
+          .mail
+            a(href="mailto:yuriyurchenko@me.com") Написать письмо
   .main-page
     
     .head
@@ -53,15 +55,15 @@ body
               path(id="pathB" d="M 30 50 L 70 50")
               path(id="pathC" d="M 70 60 L 30 60 C 10 60 10 20 40 15 A 40 38 0 1 1 20 80 L 80 20")
       .main
-        .background(data-parallax="scroll" data-image-src="../images/bg1.png")
-        .opacity-back(data-parallax="scroll" data-image-src="../images/bg2.png")
+        .background(data-parallax="scroll" data-image-src="images/bg1.png")
+        .opacity-back(data-parallax="scroll" data-image-src="images/bg2.png")
    
         .container
           #content
             #left-txt
               |Мы разрабатываем
             #center-txt
-              |Брединг
+              
             
            
                 
@@ -74,37 +76,51 @@ body
         .inner
           .main-flex
             .flex-inner
-              a.flex-item(href="project-page.html")
+              a.flex-item(href="http://jdbbq.ru/" target="_blank")
+                .logo
+                  img.svg(src="images/JD_logo.svg")
+                .bottle
+                  img(src="images/JD_img_color.png")
+                .bottle1
+                  img(src="images/JD_img_bw.png")
                 .text
                   .title
-                    |— Tsargrad.tv
+                    |— Jack Daniels
                   .txt
-                    |Фитнес клуб высоких
-                    
-                    |достижений
-                    
-                    |разработка промо сайта
-              a.flex-item(href="project-page.html")
+                    |Промо-сайт  
+                    br
+                    |для производителя 
+                    br
+                    |алкогольных напитков 
+              a.flex-item(href="http://niveausa.com/" target="_blank").nivea
+                .image
+                  img(src="images/NIVEA_img")
+                
                 .text
-                  .title
-                    |— Nivea
-                  .txt
-                    |Фитнес клуб высоких
-                    
-                    |достижений
-                    
-                    |разработка промо сайта
+                  .logo
+                    img.svg(src="images/NIVEA_logo.svg")
+                  div
+                    .title
+                      |— Nivea
+                    .txt
+                      |Разработка серии
+                      br
+                      |промо-сайтов.
             .flex-inner
-              a.flex-item(href="project-page.html")
+              a.flex-item(href="http://www.nike.com/ru/ru_ru/c/running/nikeplus/gps-app" target="_blank")
+                .image
+
+                  img.svg(src="images/NIKE_logo.svg")
+                .circle
+                  img.svg(src="images/Oval_nike.svg")
                 .text
                   .title
                     |— Nike+
                   .txt
-                    |Фитнес клуб высоких
+                    |Интерфейс мобильного 
                     
-                    |достижений
+                    |приложения
                     
-                    |разработка промо сайта
               a(href="project-page.html").flex-item
           .main-flex-second
             .flex-inner
@@ -127,61 +143,91 @@ body
                     |компании
           .main-flex-third
             .flex-inner
-              a(href="project-page.html").flex-item
-              a(href="project-page.html").flex-item
+              a.flex-item
+              a(href="http://rpz.ru/" target="_blank").flex-item
+                .image
+                  img(src="images/RPZ_img.png")
+                .logo
+                  img.svg(src="images/RPZ_logo.svg")
                 .text
                   .title
                     |— Раменский
                   .txt
-                    |Фитнес клуб высоких
+                    |Сайт авиакосмического
+                    br
                     
-                    |достижений
-                    
-                    |разработка промо сайта
-              a(href="project-page.html").flex-item
+                    |предприятия
+              a(href="http://fendi.com/" target="_blank").flex-item
+                .image
+                  
+                  img.svg(src="images/FENDI_logo.svg")
                 .text
                   .title
                     |— Fendi
                   .txt
-                    |Фитнес клуб высоких
+                    |Дизайн промо-сайта
                     
-                    |достижений
-                    
-                    |разработка промо сайта
             .flex-inner
-              a(href="project-page.html").flex-item
+              a(href="#").flex-item
+                .logo
+                  img.svg(src="images/ANCOR_arrow.svg")
+                .image
+                  img.svg(src="images/ANCOR_logo.svg")
                 .text
                   .title
-                    |— Infinity
+                    |— UNI.Ancor
                   .txt
-                    |Фитнес клуб высоких
+                    |Cайт корпоративного 
                     
-                    |достижений
+                    |университета лидера 
                     
-                    |разработка промо сайта
-              a(href="project-page.html").flex-item
+                    |HR рынка России
+              a(href="http://myfresh.ru/" target="_blank").flex-item
+                .logo
+                  img.svg(src="images/FRESH_logo.svg")
+                .image
+                  img(src="images/fresh.png")
+
                 .text
                   .title
                     |— Fresh Market
                   .txt
-                    |Фитнес клуб высоких
+                    |Разработка интернет магазина, 
                     
-                    |достижений
+                    |мобильных приложений
                     
-                    |разработка промо сайта
+                    |супермаркета натуральных продуктов
+          .main-flex-second.copy
+            .flex-inner
+              
+              a(href="http://kinext.ru/" target="_blank").flex-item
+                .image
+                  img.svg(src="images/logo-kinext.svg")
+                .tr
+                  img.svg(src="images/romb.svg")
+                .tx 
+                  img.svg(src="images/text.svg")
+
+                .text
+                  .title
+                    |— Kinext
+                  .txt
+                    |Промо-сайт фитнес клуба 
+                    |высоких достижений
+                   
     .footer
       .container
         .copyright
           |© 2012—2015 You Rock Dude!
         .social
-          a(href="")
-            img.svg(src="images/vk.svg")
-          a(href="")
+          a(href="http://instagram.com/cr8tive")
+            img.svg(src="images/instagram.svg")
+          a(href="http://www.facebook.com/yyurchenko")
             img.svg(src="images/fb.svg")
-          a(href="")
+          a(href="http://twitter.com/yuriyurchenko")
             img.svg(src="images/twitter.svg")
-          a(href="")
-            img.svg(src="images/youtube.svg")
+          a(href="http://dribbble.com/cr8tive")
+            img.svg(src="images/dr.svg")
 
 
 
