@@ -1,0 +1,717 @@
+@import 'tools/_mixins'
+@import 'tools/_helpers'
+@import 'tools/_media_queries'
+@import 'tools/_normalize'
+@import 'tools/_settings'
+@font-face
+  font-family: 'Lato'
+  src: url('Lato-Medium.eot')
+  src: url('Lato-Medium.eot?#iefix') format("embedded-opentype"), url('../fonts/Lato-Medium.woff') format("woff"), url('../fonts/Lato-Medium.ttf') format("truetype")
+  font-weight: 500
+  font-style: normal
+
+
+@font-face
+  font-family: 'Lato'
+  src: url('Lato-Thin.eot')
+  src: url('Lato-Thin.eot?#iefix') format("embedded-opentype"), url('../fonts/Lato-Thin.woff') format("woff"), url('../fonts/Lato-Thin.ttf') format("truetype")
+  font-weight: 100
+  font-style: normal
+
+
+@font-face
+  font-family: 'Lato'
+  src: url('../fonts/Lato-Semibold.eot')
+  src: url('../fonts/Lato-Semibold.eot?#iefix') format("embedded-opentype"), url('../fonts/Lato-Semibold.woff') format("woff"), url('../fonts/Lato-Semibold.ttf') format("truetype")
+  font-weight: 600
+  font-style: normal
+
+
+@font-face
+  font-family: 'Lato Hairline'
+  src: url('../fonts/Lato-Hairline.eot')
+  src: url('../fonts/Lato-Hairline.eot?#iefix') format("embedded-opentype"), url('../fonts/Lato-Hairline.woff') format("woff"), url('../fonts/Lato-Hairline.ttf') format("truetype")
+  font-weight: 300
+  font-style: normal
+
+
+@font-face
+  font-family: 'Lato'
+  src: url('../fonts/Lato-Light.eot')
+  src: url('../fonts/Lato-Light.eot?#iefix') format("embedded-opentype"), url('../fonts/Lato-Light.woff') format("woff"), url('../fonts/Lato-Light.ttf') format("truetype")
+  font-weight: 300
+  font-style: normal
+
+
+@font-face
+  font-family: 'Lato'
+  src: url('../fonts/Lato-Bold.eot')
+  src: url('../fonts/Lato-Bold.eot?#iefix') format("embedded-opentype"), url('../fonts/Lato-Bold.woff') format("woff"), url('../fonts/Lato-Bold.ttf') format("truetype")
+  font-weight: bold
+  font-style: normal
+
+
+@font-face
+  font-family: 'Lato'
+  src: url('../fonts/Lato-Regular.eot')
+  src: url('../fonts/Lato-Regular.eot?#iefix') format("embedded-opentype"), url('../fonts/Lato-Regular.woff') format("woff"), url('../fonts/Lato-Regular.ttf') format("truetype")
+  font-weight: normal
+  font-style: normal
+.pink
+  color: $gold !important
+body
+  font-family: 'Lato'
+  background: #191919
+.hidden
+  overflow: hidden
+.active
+  transform: translate(0%) !important
+.preloader
+  background: #191919
+  position: fixed 
+  width: 100%
+  height: 100%
+  display: none
+  z-index: 100
+  min-width: 100vw
+  min-height: 100vh
+  img 
+    margin: auto
+.preloader-active
+  display: flex
+#menu
+  position: fixed 
+
+  width: 100%
+  transition: all 1s ease-in-out
+
+  transform: translate(100%)
+  z-index: 30
+  background: rgba(64,64,64,0.81)
+  .container
+    height: 100vh
+    color: white
+    @extend .column
+    justify-content: center
+    .links
+
+      @extend .column
+      align-items: flex-start
+      height: 25%
+      margin-top: 15%
+    .contact
+      cursor: pointer
+    a 
+      color: white 
+      text-decoration: none
+      font-weight: bold
+      font-size: 22px
+      transition: all 0.5s ease 
+      &:hover
+        color: #C8BA8B
+    .flex-inner-cont 
+      position: absolute
+      bottom: 0
+      transform: translateY(70%)
+      transition: all 0.5s ease-in-out
+      @extend .column
+      .social
+        @extend .row
+        justify-content: flex-start
+        
+        a 
+          opacity: 0.5
+          margin-bottom: 15px
+          &:hover
+            opacity: 1
+          &:not(:first-of-type)
+            margin-left: 20%
+          svg
+            height: 25px
+            width: 25px
+            path 
+              fill: $gold
+      .contacts
+        font-weight: bold
+        margin-bottom: 5%
+        font-size: 13px
+        @extend .column
+        .addres
+          margin-bottom: 5%
+        .numbers
+          font-size: 15px
+          @extend .row
+          justify-content: flex-start
+          margin-bottom: 5%
+          .two 
+            margin-left: 8%
+        .mail 
+          a
+            font-size: 15px !important
+            text-decoration: underline
+.parallax-slider
+  transform: translate3d(0px, 0px, 0px) scale(1) !important
+.typed-cursor
+  display: none  
+.scale
+  transform: translate3d(0px, 0px, 0px) scale(1.2) !important
+.opacity
+  opacity: 0 !important
+.parallax-mirror:nth-of-type(1)
+  .parallax-slider
+    opacity: 1
+    transition: transform 15s ease 0s, opacity 0.2s 
+.parallax-mirror:nth-of-type(2)
+  .parallax-slider
+    opacity: 1
+    transition: transform 15s ease 0s, opacity 0.5s ease 0s
+.main-page
+  .head
+    min-height: 100vh
+    min-width: 1024px
+    .header
+      min-width: 1024px
+      position: absolute
+      width: 100%
+      z-index: 50
+      padding: Rem(40) 0 Rem(0) 
+      .container
+        @extend .row
+        align-items: center
+        .menu
+          cursor: pointer
+          transition: all 0.5s ease
+          opacity: 0.7
+          display: inline-block
+          z-index: 50
+          &:hover
+            opacity: 1
+          svg 
+            path 
+              stroke: #fff 
+              stroke-width: 6px
+              stroke-linecap: round
+              fill: transparent
+        .logo
+          svg 
+            vertical-align: middle
+            width: 151px
+            height: 17px
+
+    .main 
+      min-width: 100%
+      height: 100vh
+      overflow: hidden
+      position: relative
+      .background
+        position: absolute
+        height: 100%
+        width: 100%
+        transition: opacity 2s ease 0s
+        display: flex 
+        
+      .opacity-back
+        position: absolute
+        height: 100%
+        width: 100%
+        transition: opacity 2s ease 0s
+        display: flex 
+        
+
+
+          
+          
+      .container
+        min-height: 100vh
+        @extend .column
+        justify-content: flex-end
+        align-items: flex-start
+        #content
+          color: white
+          width: 100%
+          margin-bottom: 150px
+          font-size: 40px
+          line-height: 40px
+          @extend .row
+          justify-content: flex-start
+          #center-txt
+            margin-left: 10px
+            white-space: nowrap
+            color: $gold
+        
+          
+  .portfolio
+    min-width: 1024px
+    background: #181818
+    .container
+      min-height: 2505px
+      .inner
+        position: absolute
+        @extend .column
+        justify-content: flex-start
+        top: -2%
+        width: calc(100% - 130px)
+        height: 100%  
+        +tablet
+          width: calc(100% - 80px)
+        +mobile
+          width: calc(100% - 30px)
+        .main-flex
+          min-height: 900px
+          @extend .row
+          .flex-inner
+            @extend .column
+
+            .flex-item
+              position: relative
+              color: white 
+              transition: all 0.5s ease 
+              overflow: hidden
+              &:hover
+                .text
+                  transform: translate(0) !important
+              .text
+                padding: Rem(50)
+                position: absolute
+                transform: translateY(100%)
+                transition: all 1s cubic-bezier(0.56, 1.25, 0.7, 1.05) 0s
+                width: 300px
+                bottom: 0
+                @extend .column
+                .title
+                  font-size: 24px
+                  font-weight: bold
+                  line-height: 24px
+                  @extend .row
+                .txt
+                  margin-top: 20px
+                  align-self: start
+                  font-size: 14px
+                  font-weight: normal
+            &:first-of-type
+              flex: 5 0 auto
+              .flex-item
+                
+                &:first-of-type
+                  flex: 6 1 auto
+                  background: #1a1a1c
+                  &:hover
+                    .logo
+                      opacity: 1
+                    .bottle
+                      opacity: 0
+                    .bottle1
+                      opacity: 0.1
+
+                  .logo
+                    opacity: 0
+                    transition: all 1s ease 
+                    width: 65%
+                    top: 20px
+                    position: absolute
+                    z-index: 2
+                    left: 50%
+                    transform: translateX(-50%)
+                    svg 
+                      path 
+                        fill: #fff !important
+                  .bottle
+                    opacity: 1
+                    transition: all 1s ease 
+                    position: absolute
+                    bottom: -2%
+                    right: 5%
+                  .bottle1
+                    opacity: 0
+                    transition: all 1s ease 
+                    position: absolute
+                    bottom: -2%
+                    right: 5%
+
+                &:last-of-type
+                  flex: 8 1 auto
+                  background: #212B84
+                  position: relative
+                  .text
+                    height: 90%
+                    .logo
+                      svg 
+                        width: 150%
+                        path, rect
+                          fill: #fff !important
+                  .image
+                    position: absolute
+                    transition: all 1s ease
+                    bottom: -1%
+                    img 
+                      max-height: 100%
+                      max-width: 100%
+                  &:hover
+                    .image 
+                      transform: translate3d(40%,0,0)
+                      opacity: 0.5
+
+            &:last-of-type
+              flex: 3 0 auto
+              .flex-item
+                background: url('../images/nike.jpg') no-repeat center center 
+                background-size: cover
+                flex: 5 1 auto
+                display: flex
+                &:hover
+                  .image
+                    svg 
+                      width: 130px
+                  .circle
+                    svg 
+                      width: 220px
+                      opacity: 1
+                .image
+                  position: absolute
+                  left: 50%
+                  top: 60%
+                  transform: translate(-50%,-50%)
+                  transition: all 1s ease
+                  
+                  svg 
+                    position: relative
+                    width: 150px
+                    transition: all 1s ease
+                    
+                    path 
+                      fill: #fff !important
+
+                .circle
+                  position: absolute 
+                  left: 50%
+                  top: 60%
+                  transform: translate(-50%,-50%)
+                  transition: all 1s ease
+                  svg 
+                    width: 200px
+                    transition: all 1s ease
+                    opacity: 0
+                    
+                .text
+                  top: 0
+                  justify-content: flex-start
+                  transform: translateY(-100%)
+
+                &:last-of-type
+                  flex: 3 1 auto
+                  background: transparent
+                  opacity: 0
+                  z-index: -1
+        .main-flex-second
+          height: 400px
+          display: flex
+          .flex-inner
+            width: 100%
+            height: 100%
+            @extend .column
+            .flex-item
+              background: #b5b5b5
+              width: 100%
+              height: 100%
+              position: relative
+              color: white 
+              transition: all 1s ease-in-out
+              overflow: hidden
+              background: #fa0000
+              &:hover
+                .text
+                  transform: translateY(0%)
+                .first
+                  opacity: 0
+                .second
+                  svg 
+                    path 
+                      fill: #fff
+              .first
+                transition: all 1s ease   
+                height: 100%
+                img 
+                  position: absolute
+                  left: -250px
+                  top: 50%
+                  transform: translateY(-50%)
+
+
+              .second
+                position: relative
+                min-width: 50%
+                svg 
+                  position: absolute
+                  max-width: 290px
+                  min-width: 290px
+                  z-index: 1
+                  right: 0
+                  top: -30px
+                   
+                  path 
+                    fill: transparent
+                    transition: all 1s ease
+              .text
+                padding: Rem(50)
+                position: absolute
+                width: 300px
+                bottom: 0
+                transform: translateY(100%)
+                transition: all 1s cubic-bezier(0.56, 1.25, 0.7, 1.05)
+                @extend .column
+                .title
+                  font-size: 24px
+                  font-weight: bold
+                  line-height: 24px
+                .txt
+                  margin-top: 20px
+                  align-self: start
+                  font-size: 14px
+                  font-weight: normal
+        .main-flex-third
+          min-height: 950px
+          @extend .row
+          .flex-inner
+            position: relative
+            @extend .column
+            .flex-item
+              position: relative
+              color: white 
+              transition: all 1s ease
+              overflow: hidden
+              &:hover
+                .text
+                  transform: translateY(0%) !important
+              .text
+                padding: Rem(50)
+                position: absolute
+                width: 300px
+                transform: translateY(100%)
+                transition: all 1s cubic-bezier(0.56, 1.25, 0.7, 1.05) 0s
+                @extend .column
+                .title
+                  font-size: 24px
+                  font-weight: bold
+                  line-height: 24px
+                .txt
+                  margin-top: 20px
+                  align-self: start
+                  font-size: 14px
+                  font-weight: normal
+            &:first-of-type
+              flex: 2 1 auto
+              .flex-item
+                .txt
+                  font-size: 14px
+                &:first-of-type
+                  flex: 2 1 auto
+                  opacity: 0
+                  z-index: -1
+                  background: transparent
+                &:nth-of-type(2)
+                  flex: 3 1 auto
+                  opacity: 1
+                  background: #171833
+                  &:hover
+                    .image
+                      transform: translateY(-90%)
+                    .logo
+                      opacity: 1
+                  .image
+                    position: absolute
+                    top: 5%
+                    left: 5%
+                    opacity: 1
+                    transition: all 1s ease
+
+                  .logo
+                    opacity: 0
+                    transition: all 1s ease-in-out
+                    position: absolute
+                    top: 10%
+                    left: 25%
+                    transform: translateX(-50%)
+                    svg 
+                      height: 110px
+
+                      
+                      path
+                        fill: #fff !important
+                      
+                    
+                      
+                    
+                      
+
+                  .text
+                    bottom: 0
+                &:last-of-type
+                  flex: 2 1 auto
+                  background: url('../images/FENDI_bckg.png') no-repeat center center 
+                  background-size: cover
+                  &:hover
+                    .image
+                      width: 100%
+                  .image
+                    width: 30%
+                    background: #FEBE54
+                    height: 110%
+                    position: absolute
+                    transition: all 1s ease
+                    padding: 10px
+                    svg 
+                      max-width: 200px
+                      float: right
+                      path 
+                        fill: white
+                  .text
+                    bottom: 0
+            &:last-of-type
+              flex: 3 1 auto
+              .flex-item
+                &:first-of-type
+                  flex: 4 1 auto
+                  background: #774093
+                  &:hover
+                    .logo
+                      transform: translate(-400%,-50%)
+                    .image
+                      transform: translate(0,-50% )
+                  .logo
+                    position: absolute
+                    transition: all 1s ease-in-out
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%,-50%)
+                    svg 
+                      height: 100px
+                      width: 100px
+                      path, rect
+                        fill: #fff !important
+                      
+                  .image
+
+                    position: absolute
+                    height: 60%
+                    width: 55%
+                    background: white
+                    right: 0
+                    top: 50%
+                    transform: translate(105%,-50%)
+                    transition: all 1s ease-in-out
+                    display: flex
+                    box-shadow: 0px 900px 100px -20px black
+                    svg 
+                      height: 80%
+                      width: 80%
+                      margin: auto
+                  .text
+                    transform: translateY(-100%)
+                &:last-of-type
+                  flex: 5 1 auto
+                  background: #fff
+                  &:hover
+                    .logo
+                      opacity: 1
+                    .image
+                      transform: translate(40%)
+
+                  .image
+                    position: absolute
+                    bottom: 0
+                    right: -5%
+                    transition: all 1s ease
+                  .logo
+                    position: absolute
+                    left: 8%
+                    opacity: 0
+                    transition: all 1s ease
+                    margin-top: 100px
+                    svg 
+                      width: 100%
+
+                      path 
+                        fill: #53651f !important
+
+                  .text
+                    bottom: 0
+                    color: #191919
+        .copy
+          width: 70%
+          height: 300px
+          .flex-item
+            background: url('../images/backgr.png') no-repeat center center !important
+            background-size: cover 
+            &:hover 
+              .image
+                opacity: 0
+              .tr 
+                transform: translate(0)
+              .tx 
+                transform: translate(-100%)
+            .image
+              position: absolute
+              top: 50%
+              left: 50%
+              transform: translate(-50%, -50%)
+              transition: all 1s ease
+              opacity: 1
+              z-index: 2
+              svg 
+                width: 100%
+            .tr 
+              position: absolute 
+              left: 0%
+              z-index: 1
+              transition: all 1s ease
+              transform: translate(-100%)
+              svg 
+                width: 300px
+            .text
+              z-index: 2
+            .tx
+              position: absolute 
+              right: -27%
+              bottom: 5%
+              z-index: 1
+              transition: all 1s ease
+              transform: translate(20%)
+              svg 
+                width: 200px
+              
+  .footer
+    min-width: 1024px
+    padding: Rem(40) 0
+    background: #181818
+    .container
+      @extend .row
+      color: black
+      .copyright
+        font-size: 11px
+        margin-left: Rem(30)
+        color: $gold
+      .social
+        @extend .row
+        justify-content: flex-end
+        align-items: center
+        a 
+          opacity: 0.5
+          margin-right: Rem(30)
+          transition: all 0.5s ease
+          &:hover
+            opacity: 1
+          svg
+            height: 20px
+            width: 20px
+            path 
+              fill: $gold !important
+
+
+
+
+
+
+
+
+
+
