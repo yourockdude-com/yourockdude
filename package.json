@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "fast": "node ./bin/www",
-    "start": "sh ./links.sh && brunch b ./frontend && node ./bin/www"
+    "start": "node ./bin/www",
+    "full": "sh ./links.sh && brunch b ./frontend && node ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
