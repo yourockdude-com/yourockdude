@@ -18,11 +18,13 @@ $(document).ready ->
   $('.slider').slick(
     adaptiveHeight: false
     arrows: false
+    dots: true
     fade: true
     autoplay: true
-    autoplaySpeed: 4000
+    autoplaySpeed: 5500
     
     )
+
   $('.contact').click ->
     $('.flex-inner-cont').addClass('active')
   

@@ -1,0 +1,263 @@
+doctype html
+head
+  meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+  link(rel="stylesheet" href="stylesheets/app.css")
+
+  script(src="javascripts/vendor.js")
+  script(src="javascripts/app.js")
+  script(src="javascripts/segment.min.js")
+  script(src="javascripts/ease.min.js")
+  script.
+    require('initialize');
+
+body#about
+  .preloader.preloader-active
+    img(src="images/preloader.gif")
+  #menu
+    .container
+      .links
+        a(href="/")
+          |Работы
+        a(href="/about").pink
+          |О нас
+        a.contact
+          |Контакты
+      .flex-inner-cont
+        .social
+          a(href="http://instagram.com/cr8tive")
+            img.svg(src="images/instagram.svg")
+          a(href="http://www.facebook.com/yyurchenko")
+            img.svg(src="images/fb.svg")
+          a(href="http://twitter.com/yuriyurchenko")
+            img.svg(src="images/twitter.svg")
+          a(href="http://dribbble.com/cr8tive")
+            img.svg(src="images/dr.svg")
+        .contacts
+          .addres
+            |Россия, Ростов-на-Дону, ул. Пушкинская, 157
+          .numbers
+            .one
+              |+7 863 264 94 89
+            .two
+              |+7 919 894 44 44
+          .mail
+            a(href="mailto:yuriyurchenko@me.com") Написать письмо
+  .main-page
+  
+    .head
+      header.header
+        .container
+          a.logo(href="")
+            img.svg(src="images/logo.svg")
+          .menu
+            svg(width="100px" height="100px")
+              path(id="pathA" d="M 30 40 L 70 40 C 90 40 90 75 60 85 A 40 40 0 0 1 20 20 L 80 80")
+              path(id="pathB" d="M 30 50 L 70 50")
+              path(id="pathC" d="M 70 60 L 30 60 C 10 60 10 20 40 15 A 40 38 0 1 1 20 80 L 80 20")
+      .main
+        .background(data-parallax="scroll" data-image-src="images/bg1.png")
+        .opacity-back(data-parallax="scroll" data-image-src="images/bg2.png")
+        .container
+          #content
+            |Мы занимаемся интернет-рекламой в самых разных ее проявлениях.
+
+    .whatwedo
+      .container
+        .inner
+          .main-flex
+            .flex-inner
+              a.flex-item(href="#")
+                .image
+                  img.svg(src="images/icon_yrd_app.svg")
+                .text
+                  .title
+                    |Разработка и поддержка сайтов и мобильных приложений для интернет-магазинов. 
+
+                  .txt
+                    |E-commerce
+              a.flex-item(href="#" target="_blank").nivea
+                .image
+                  img.svg(src="images/icon_yrd_code.svg")
+                .text
+                  .title
+                    |Мобильные приложения на вс платформах 
+                    br
+                    |Интерактив
+                    br
+                    |Игры для социальных сетей, в рамках веб-сайтов и для мобильных устройств 
+
+                  .txt
+                    |Программирование
+            .flex-inner
+              a.flex-item(href="#" target="_blank")
+                .image
+                  img.svg(src="images/icon_yrd_web.svg")
+                .text
+                  
+                  .title
+                    |Рарзработка веб-сайтов любой сложности и тематик
+                  .txt
+                    |Промо
+                  .txt
+                    |Корпоративные
+                  .txt
+                    |Визитки
+                  .txt
+                    |Спецпроекты 
+                    br
+                    |на готовых площадках
+
+              a.flex-item(href="#")
+                .text
+                  .txt
+                    |Россия, Ростов-на-Дону, 
+                    br
+                    | ул. Пушкинская, 157
+                  .txt
+                    |+7 (863) 264 94 89
+                    br
+                    |+7 (919) 894 44 44
+                  .txt
+                    |Написать нам
+                
+          .main-flex-second
+            .flex-inner
+
+              a(href="#" target="_blank").flex-item
+                
+                .image
+                  img.svg(src="images/icon_yrd_brndng.svg")
+
+                .text
+                  .title
+                    |Брендинг и айдентика
+                    br
+                    |Графический дизайн 
+                    br
+                    |Дизайн для игр и приложений
+                  .txt
+                    |Дизайн
+
+
+
+
+    .our-team
+      .container
+        .slider
+          .slide
+            .title
+              |Валера
+            .txt.
+              Если Валера не кодит - значит, он спит (или играет на гитаре, но вероятнее спит). Если Валера не спит и не играет на гитаре, значит, он кодит, значит, чработает с html/css (jade/sass) и Javascript (Coffeescript - вот почему не спит!), а собирает все brunch'ем, верстает flexbox'ами и контролирует git'ом. Золотые руки!
+          .slide
+            .title
+              |Юра
+            .txt.        
+              Юра Юрченко - король, капитан, креативный директор, мизантроп (зачеркнуто), отец, сын и святой дух You Rock, Dude! Более 10 лет успешно дизайнерит и работает с такими крупными клиентами, как Nike, Adidas, Fendi, Nivea, Martini, Jack Daniles, J. Walker, Pepsi, Google, Suzuki и многими другими. Силен в UI/UX, разрабатывает дизайн мобильных приложений и лого. Всегда внимателен к деталям, всегда стремится найти наиболее необычные и удобные решения в дизайне. Любит новое, интересное и красивое. Не любит некрасивое, корявое и в принципе глупое и безвкусное. 
+          .slide
+            .title
+              |Вова
+            .txt.
+              Вова убежден, что продумать идею игры и накидать первую сцену при помощи Unity - это лишь начало; для полноценной реализации требуются глубокие познания в науках, а также спрайты, модели, сюжет, интерфейс, контент, дизайн и прочие важные штуки... Как видите, Вова - очень вдумчивый, серьезный программист-разработчик. Его зоркий взгляд не упускает ни единую мелочь. 
+
+          .slide
+            .title
+              |Юра
+            .txt.
+              Дизайн, геймдизайн, игрища, пиксельарты, красивое, удобное и интересное - это Юра. Сам Юра сказал, что еще любит заебывать программистов, но мы сделали вид, что не расслышали. Юра получил два художественных образования и вообще учился на скульптора, но вовремя понял, что надо подаваться в диджитал и рекламу. Мудрый человек. 
+
+          .slide
+            .title
+              |Антон
+            .txt.
+               Это Антон. Антон фигачит приложения для всех платформ, участвовал в разработке множества проектов, шарит в Objective-C, Swift, фреймфорках типа Cocoa Touch (UlKit, Foundation, MapKit, CoreAnimation), фреймворках Core, а также использует свежайшие opensourse-библиотеки iOS. Любит непонятные иностранные слова. И не просто любит, а легко кодит все, что за ними скрывается
+          .slide
+            .title
+              |Маша
+            .txt.
+              Если вы нашли пропущенную запятую, почувствовали превосходный слог или обиделись на шутку в тексте - все это к копирайтеру Маше. Маша - птица-говорун, пишет, думает, рассказывает истории, пиарит, переводит, правит орфографию, может из любого инфоповода выжать инсайт и драму и приносит мандарины. 
+
+          .slide
+            .title
+              |Дима
+            .txt.
+              Диме 23, Дима программист PHP, back-end разработчик, создатель сайтов, фюрер админок, светлая голова и вообще разносторонняя личность. В свободное от You Rock, Dude! копает на гитаре, обучает молодняк, короче - делает прекрасное и полезное даже за пределами работы. Филантроп.
+          .slide
+            .title
+              |Тигран
+            .txt.
+              Тигран считает, что он местный папа, крыша, патриарх и техдиректор "этой шайки". О какой шайке он говорит, мы точно не знаем. Тигран программирует на javascript и babel (ES2015), активно и духовно практикует React Flux/Redux, является jquery-ниндзей в завязке. Смузи, коворкинги, стартапы, крафтовое пиво, трудные ночи, катания на фиксе - казалось бы, все как у нормальных людей, но...
+              <br>
+              Полная версия видения Тиграна про заточки, парашу и пацанов уже доступна на iTunes уже за $9,99.
+
+
+
+
+
+
+
+
+    .instagram
+      .container
+        .title
+          |#каждыйденьдурацкийhashtag
+        .flex-inner
+          .flex-item
+          .flex-item
+          .flex-item
+          .flex-item
+          .flex-item
+          .flex-item
+          .flex-item
+          .flex-item
+
+
+
+    .somewords
+      .container
+        .txt
+          |Мы не любим болтать попусту и нудно рассказывать про этапы, анализ и кто на какую кнопочку нажимал в процессе. Любую идею мы можем довести до толковой реализации.
+        .txt
+          |Наши детища отлично работают, круто выглядят и удобны в обращении - это все, что нужно клиенту, расчитывающему на реальный результат.
+        .txt
+          |You rock, dude!
+
+
+    .feedback
+      .container
+        .txt
+          span.popup
+            |Оставьте заявку
+          |, или 
+          span.mail
+            |напишите письмо
+
+
+
+
+
+
+
+
+
+
+
+    .footer
+      .container
+        .copyright
+          |© 2012—2015 You Rock Dude!
+        .image
+          img.svg(src="images/icon_yrd_callme.svg")
+        .social
+          a(href="http://instagram.com/cr8tive")
+            img.svg(src="images/instagram.svg")
+          a(href="http://www.facebook.com/yyurchenko")
+            img.svg(src="images/fb.svg")
+          a(href="http://twitter.com/yuriyurchenko")
+            img.svg(src="images/twitter.svg")
+          a(href="http://dribbble.com/cr8tive")
+            img.svg(src="images/dr.svg")
+  
+  
+
+
